@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Task</title>
+    <style>
+        body {
+            display: grid;
+            align-items: center;
+            mix-blend-mode: multiply;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            background-color: #ccc;
+            border-radius: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(750px, 1fr));
+        }
+
+        .item {
+            background-color: #eee;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid;
+            font-size: 1.5rem;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        img {
+            width: 150px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: lightsteelblue;
+        }
+
+        #search-input {
+            width: 60%;
+            max-width: 400px;
+            padding: 10px 20px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            font-size: 18px;
+            color: #333;
+            margin-right: 10px;
+        }
+
+        #search-button {
+            padding: 10px 20px;
+            width: auto;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            font-size: 18px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #search-button:hover {
+            background-color: #3e8e41;
+        }
+
+        @media (max-width: 500px) {
+            .search-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #search-input,
+            #search-button {
+                /* width: 100%;
+                max-width: none;
+                margin-right: 0;
+                margin-bottom: 10px; */
+                width: 50%;
+                max-width: none;
+            }
+
+            .container{
+                display: grid;
+                grid-template-columns: 1fr;
+                width: auto;
+            }
+        }
+
+        /* @media screen(max-width: 300px) {
+            #search-input,
+            #search-button{ */
+                /* width: 40px; */
+                /* max-width: none; */
+            /* }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search category" />
+        <button id="search-button">Filter</button>
+    </div>
+    <div class="container">
+    </div>
+    <script src="task08.js"></script>
+</body>
+
+</html>
